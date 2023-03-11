@@ -13,63 +13,118 @@
 }
 
 body {
+    background-color: burlywood;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 100%;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 18px;
     height: 100vh;
+    font-weight: 500;
 }
 
 main {
     display: flex;
+    background-color: white;
     margin: 20px;
-    max-width: 350xp;
+    width: 550px;
     height: 380px;
     border-radius: 12px;
     overflow: hidden;
-    text-align: center;
+}
+
+main h3 {
+    margin: 20px 0px;
 }
 
 main .result {
     width: 50%;
-    padding: 5px;
-    background-color: blue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    text-align: center;
+    background-color: cornflowerblue;
+    padding: 10px 15px 20px 15px;
 }
 
-main .result h3 {
-    margin-bottom: 20px;
-}
-
-main .result .xTo100 {
-    background-color: black;
-    padding: 30px;
-    width: 85px;
-    height: 85px;
-    color: white;
+main .result .xTo100{
+    padding: 40px;
+    width: 65px;
+    height: 65px;
     border-radius: 100px;
-    margin-bottom: 20px;
+    background-color: blue;
+    margin: 0 auto;
+    margin-bottom: 25px;
 }
-
-main .result .xTo100 span {
-    display: block;
-}
-
-main .result span {
+main .result .xTo100 span:first-child{
     color: white;
-    margin-bottom: 20px;
+    display: block;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+main .result > span{
+    font-weight: 700;
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
 }
 
 main .result p{
-    padding: 20px 20px;
+    padding: 0 5px;
+    font-size: 0.98rem;
+    text-align: center;
 }
 
 main .summary {
+    background-color: cyan;
     width: 50%;
+    text-align: left;
+    padding: 10px 20px 20px 20px;
+}
+
+main .summary ul {
+    list-style: none;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+main .summary ul li {
+    display: flex;
+    width: 100%;
+    background-color: aquamarine;
+    padding: 10px 0px 10px 0px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+main .summary button {
+    border: none;
+    border-radius: 40px;
+    width: 100%;
+    padding: 15px;
+    background-color: black;
+    color: white;
+}
+
+main .summary ul li div img {
+    margin-right: 10px;
+}
+
+main .summary ul li div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px;
+}
+
+main .summary ul li div:last-child {
+    padding-right: 15px;
+}
+
+main .summary ul li div:first-child .skills,
+main .summary ul li div:last-child span {
+    font-weight: bold;
 }
 
 .attribution {
