@@ -1,4 +1,23 @@
-:root {}
+@import './css/desktop.css';
+@import './css/mobile.css';
+:root {
+    /*Sumary*/
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+
+    --Light-slate-blue: hsl(252, 100%, 67%);
+    --Light-royal-blue: hsl(241, 81%, 54%);
+
+    --Violet-blue-circle: hsla(256, 72%, 46%, 1);
+    --Persian-blue-circle: hsla(241, 72%, 46%, 0);
+
+    --White: hsl(0, 0%, 100%);
+    --Pale-blue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Dark-gray-blue: hsl(224, 30%, 27%);
+}
 
 * {
     padding: 0;
@@ -6,18 +25,8 @@
     box-sizing: none;
 }
 
-@media only screen and (max-width: 375px) {
-    body {
-        background-color: lightblue;
-    }
-}
-
 body {
-    background-color: burlywood;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    background-color: var(--White);
     width: 100%;
     font-family: 'Hanken Grotesk', sans-serif;
     font-size: 18px;
@@ -25,77 +34,43 @@ body {
     font-weight: 500;
 }
 
-main {
-    display: flex;
-    background-color: white;
-    margin: 20px;
-    width: 550px;
-    height: 380px;
-    border-radius: 12px;
-    overflow: hidden;
-}
-
 main h3 {
-    margin: 20px 0px;
+    margin: 25px 0px;
 }
 
 main .result {
-    width: 50%;
+    background: linear-gradient(0deg, var(--Light-royal-blue) 0%, var(--Light-slate-blue) 100%);
     text-align: center;
-    background-color: cornflowerblue;
-    padding: 10px 15px 20px 15px;
 }
 
-main .result .xTo100{
-    padding: 40px;
-    width: 65px;
-    height: 65px;
-    border-radius: 100px;
-    background-color: blue;
-    margin: 0 auto;
-    margin-bottom: 25px;
+main .result h3 {
+    color: var(--Pale-blue);
 }
-main .result .xTo100 span:first-child{
-    color: white;
+
+main .result .xTo100 span:first-child {
+    color: var(--White);
     display: block;
     font-weight: 700;
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
-main .result > span{
-    font-weight: 700;
-    display: block;
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-}
-
-main .result p{
-    padding: 0 5px;
-    font-size: 0.98rem;
-    text-align: center;
+main .result .xTo100 span:last-child {
+    color: var(--Light-lavender);
+    font-size: 1rem;
 }
 
 main .summary {
-    background-color: cyan;
-    width: 50%;
+    background-color: var(--White);
     text-align: left;
-    padding: 10px 20px 20px 20px;
+}
+
+main .summary h3 {
+    color: var(--Dark-gray-blue);
 }
 
 main .summary ul {
     list-style: none;
     width: 100%;
-    margin-bottom: 25px;
-}
-
-main .summary ul li {
-    display: flex;
-    width: 100%;
-    background-color: aquamarine;
-    padding: 10px 0px 10px 0px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    justify-content: space-between;
 }
 
 main .summary button {
@@ -105,6 +80,14 @@ main .summary button {
     padding: 15px;
     background-color: black;
     color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 200ms;
+}
+
+main .summary button:hover {
+    background: linear-gradient(0deg, var(--Light-royal-blue) 0%, var(--Light-slate-blue) 100%);
 }
 
 main .summary ul li div img {
@@ -122,9 +105,45 @@ main .summary ul li div:last-child {
     padding-right: 15px;
 }
 
-main .summary ul li div:first-child .skills,
-main .summary ul li div:last-child span {
-    font-weight: bold;
+main .summary ul li div:first-child>.skills,
+main .summary ul li div:last-child>span {
+    font-weight: 800;
+}
+
+main .summary ul li div:last-child>span {
+    color: var(--Dark-gray-blue);
+}
+
+.red {
+    color: var(--Light-red);
+}
+
+.red-alpha {
+    background-color: hsla(0, 100%, 67%, 0.1);
+}
+
+.yellow {
+    color: var(--Orangey-yellow);
+}
+
+.yellow-alpha {
+    background-color: hsla(39, 100%, 56%, 0.1);
+}
+
+.green {
+    color: var(--Green-teal);
+}
+
+.green-alpha {
+    background-color: hsla(166, 100%, 37%, 0.1);
+}
+
+.blue {
+    color: var(--Cobalt-blue);
+}
+
+.blue-alpha {
+    background-color: hsla(234, 85%, 45%, 0.1);
 }
 
 .attribution {
