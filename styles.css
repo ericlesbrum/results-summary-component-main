@@ -1,5 +1,6 @@
 @import './css/desktop.css';
 @import './css/mobile.css';
+
 :root {
     /*Sumary*/
     --Light-red: hsl(0, 100%, 67%);
@@ -39,7 +40,7 @@ main h3 {
 }
 
 main .result {
-    background: linear-gradient(0deg, var(--Light-royal-blue) 0%, var(--Light-slate-blue) 100%);
+    background: linear-gradient(180deg, var(--Light-slate-blue), var(--Light-royal-blue));
     text-align: center;
 }
 
@@ -87,7 +88,7 @@ main .summary button {
 }
 
 main .summary button:hover {
-    background: linear-gradient(0deg, var(--Light-royal-blue) 0%, var(--Light-slate-blue) 100%);
+    background: linear-gradient(180deg, var(--Light-slate-blue), var(--Light-royal-blue));;
 }
 
 main .summary ul li div img {
